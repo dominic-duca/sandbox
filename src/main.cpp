@@ -1,8 +1,26 @@
 
 #include <SDL3/SDL.h>
+#include <stdexcept>
+
+#define WINDOW_WIDTH  800
+#define WINDOW_HEIGHT 600
 
 int main() {
-    SDL_Init(SDL_INIT_VIDEO);
+    if (!SDL_Init(SDL_INIT_VIDEO)) {
+        SDL_LogError(SDL_LOG_CATEGORY_VIDEO, "SDL Init Failure - %s", SDL_GetError());
+        
+        return EXIT_FAILURE;
+    }
 
-    return 0;
+    SDL_Window* window = SDL_CreateWindow("Sandbox", WINDOW_WIDTH, WINDOW_HEIGHT, 0);
+
+    if (window == nullptr) {
+        SDL_LogError(SDL_LOG_CATEGORY_VIDEO, "Window Init Failure - %s", SDL_GetError());
+
+        return EXIT_FAILURE;
+    }
+
+    SDL_Quit();
+
+    return EXIT_SUCCESS;
 }
