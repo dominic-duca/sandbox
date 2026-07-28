@@ -36,6 +36,9 @@ int main() {
 
     while (window_open) {}
 
+    SDL_GL_DestroyContext(gl_context);
+    SDL_DestroyWindow(window);
+
     SDL_Quit();
 
     return EXIT_SUCCESS;
