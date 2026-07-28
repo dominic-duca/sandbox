@@ -32,6 +32,10 @@ int main() {
         return EXIT_FAILURE;
     }
 
+    bool window_open = true;
+
+    while (window_open) {}
+
     SDL_Quit();
 
     return EXIT_SUCCESS;
