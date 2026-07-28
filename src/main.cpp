@@ -34,7 +34,18 @@ int main() {
 
     bool window_open = true;
 
-    while (window_open) {}
+    while (window_open) {
+        SDL_Event event;
+
+        while (SDL_PollEvent(&event)) {
+            switch (event.type) {
+                case SDL_EVENT_QUIT:
+                window_open = false;
+                
+                break;
+            }
+        }
+    }
 
     SDL_GL_DestroyContext(gl_context);
     SDL_DestroyWindow(window);
