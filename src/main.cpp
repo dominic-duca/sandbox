@@ -45,6 +45,8 @@ int main() {
                 break;
             }
         }
+
+        SDL_GL_SwapWindow(window);
     }
 
     SDL_GL_DestroyContext(gl_context);
