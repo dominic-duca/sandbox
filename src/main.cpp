@@ -24,6 +24,14 @@ int main() {
         return EXIT_FAILURE;
     }
 
+    SDL_GLContext gl_context = SDL_GL_CreateContext(window);
+
+    if (gl_context == nullptr) {
+        SDL_LogError(SDL_LOG_CATEGORY_VIDEO, "OpenGL Context Failure - %s", SDL_GetError());
+
+        return EXIT_FAILURE;
+    }
+
     SDL_Quit();
 
     return EXIT_SUCCESS;
