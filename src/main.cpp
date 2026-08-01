@@ -40,6 +40,8 @@ int main() {
         return EXIT_FAILURE;
     }
 
+    glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+
     bool window_open = true;
 
     while (window_open) {
