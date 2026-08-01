@@ -1,5 +1,7 @@
 
 #include <SDL3/SDL.h>
+#include <glad/glad.h>
+
 #include <stdexcept>
 
 #define WINDOW_WIDTH  800
@@ -29,6 +31,12 @@ int main() {
     if (gl_context == nullptr) {
         SDL_LogError(SDL_LOG_CATEGORY_VIDEO, "OpenGL Context Failure - %s", SDL_GetError());
 
+        return EXIT_FAILURE;
+    }
+
+    if (!gladLoadGLLoader((GLADloadproc) SDL_GL_GetProcAddress)) {
+        SDL_LogError(SDL_LOG_CATEGORY_VIDEO, "GLAD Init Failure - %s", SDL_GetError());
+        
         return EXIT_FAILURE;
     }
 
