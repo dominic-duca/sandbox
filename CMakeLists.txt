@@ -10,7 +10,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 find_package(SDL3 REQUIRED)
 
-add_subdirectory(ext/glad)
+add_subdirectory(vendor/glad)
 
 add_executable(sandbox src/main.cpp)
 
