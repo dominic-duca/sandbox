@@ -53,6 +53,16 @@ int main() {
                 window_open = false;
                 
                 break;
+
+                case SDL_EVENT_KEY_DOWN:
+                switch (event.key.key) {
+                    case SDLK_ESCAPE:
+                    window_open = false;
+                    
+                    break;
+                }
+
+                break;
             }
         }
 
