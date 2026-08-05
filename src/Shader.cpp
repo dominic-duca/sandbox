@@ -15,20 +15,22 @@ Shader::Shader(GLenum type, const char* path) : m_type(type) {
 
     file.close();
 
-    std::string source_string = source_stream.str();
+    compile(source_stream.str());
+}
 
-    const char* source = source_string.c_str();
+void Shader::compile(std::string source) {
+    const GLchar* source_c = source.c_str();
 
     int status;
     char log[512];
 
-    m_id = glCreateShader(type);
+    m_id = glCreateShader(m_type);
 
-    glShaderSource(m_id, 1, &source, nullptr);
+    glShaderSource(m_id, 1, &source_c, nullptr);
     glCompileShader(m_id);
 
     glGetShaderiv(m_id, GL_COMPILE_STATUS, &status);
-    
+
     if (!status) {
         glGetShaderInfoLog(m_id, 512, nullptr, log);
         std::cerr << "[Shader] Compilation failed: " << log << '\n';

@@ -12,6 +12,8 @@ class Shader {
     GLenum m_type;
     GLuint m_id;
 
+    void compile(std::string source);
+
 public:
     Shader(GLenum type, const char* path);
 };
