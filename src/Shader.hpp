@@ -16,6 +16,9 @@ class Shader {
 
 public:
     Shader(GLenum type, const char* path);
+
+    GLenum getType() const;
+    GLuint getId() const;
 };
 
 #endif
