@@ -5,6 +5,8 @@
 #include "Shader.hpp"
 
 class ShaderProgram {
+    GLuint m_id;
+
 public:
     ShaderProgram();
 };

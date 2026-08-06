@@ -1,4 +1,6 @@
 
 #include "ShaderProgram.hpp"
 
-ShaderProgram::ShaderProgram() { }
+ShaderProgram::ShaderProgram() {
+    m_id = glCreateProgram();
+}
