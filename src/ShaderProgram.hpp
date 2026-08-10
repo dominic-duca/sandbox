@@ -11,6 +11,8 @@ public:
     ShaderProgram();
 
     void attach(const Shader &shader);
+    
+    void link();
 };
 
 #endif
