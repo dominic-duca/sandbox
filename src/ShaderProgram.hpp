@@ -9,6 +9,8 @@ class ShaderProgram {
 
 public:
     ShaderProgram();
+
+    void attach(const Shader &shader);
 };
 
 #endif
