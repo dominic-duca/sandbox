@@ -24,3 +24,7 @@ void ShaderProgram::link() {
         return;
     }
 }
+
+void ShaderProgram::use() {
+    glUseProgram(m_id);
+}

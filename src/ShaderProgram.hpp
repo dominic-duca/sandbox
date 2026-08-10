@@ -13,6 +13,8 @@ public:
     void attach(const Shader &shader);
     
     void link();
+
+    void use();
 };
 
 #endif
