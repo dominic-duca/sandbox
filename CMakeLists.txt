@@ -13,7 +13,7 @@ find_package(SDL3 REQUIRED)
 add_subdirectory(vendor/glad)
 
 add_executable(sandbox
-    src/main.cpp
+    src/Main.cpp
     src/ShaderProgram.cpp
     src/Shader.cpp
 )
