@@ -4,6 +4,7 @@
 
 #include <stdexcept>
 
+#include "Shader.hpp"
 #include "ShaderProgram.hpp"
 
 #ifndef SOURCE_DIR
