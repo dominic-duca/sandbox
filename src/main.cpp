@@ -4,6 +4,12 @@
 
 #include <stdexcept>
 
+#include "ShaderProgram.hpp"
+
+#ifndef SOURCE_DIR
+#error SOURCE_DIR is not defined
+#endif
+
 #define WINDOW_WIDTH  800
 #define WINDOW_HEIGHT 600
 

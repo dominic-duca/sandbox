@@ -18,4 +18,6 @@ add_executable(sandbox
     src/Shader.cpp
 )
 
+target_compile_definitions(sandbox PRIVATE SOURCE_DIR="${Sandbox_SOURCE_DIR}")
+
 target_link_libraries(sandbox PRIVATE SDL3::SDL3 glad)
