@@ -52,6 +52,9 @@ int main() {
 
     glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
+    Shader basicVertex (GL_VERTEX_SHADER, BASIC_VERTEX),
+        basicFragment (GL_FRAGMENT_SHADER, BASIC_FRAGMENT);
+    
     bool window_open = true;
 
     while (window_open) {
