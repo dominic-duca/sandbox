@@ -62,6 +62,8 @@ int main() {
 
     program.link();
 
+    program.use();
+
     bool window_open = true;
 
     while (window_open) {
