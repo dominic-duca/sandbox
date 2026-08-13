@@ -60,6 +60,8 @@ int main() {
     program.attach(basicVertex);
     program.attach(basicFragment);
 
+    program.link();
+
     bool window_open = true;
 
     while (window_open) {
