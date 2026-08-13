@@ -64,6 +64,12 @@ int main() {
 
     program.use();
 
+    float triangleVertices[] = {
+        -0.5f, -0.5f, 0.0f,
+         0.5f, -0.5f, 0.0f,
+         0.0f,  0.5f, 0.0f
+    };
+
     bool window_open = true;
 
     while (window_open) {
