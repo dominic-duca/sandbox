@@ -12,7 +12,7 @@
 #endif
 
 #define BASIC_VERTEX SOURCE_DIR "/res/shaders/basic.vs"
-#define BASIC_FRAGMENT SOURCE_DIR "res/shaders/basic.fs"
+#define BASIC_FRAGMENT SOURCE_DIR "/res/shaders/basic.fs"
 
 #define WINDOW_WIDTH  800
 #define WINDOW_HEIGHT 600
