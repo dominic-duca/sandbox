@@ -55,6 +55,11 @@ int main() {
     Shader basicVertex (GL_VERTEX_SHADER, BASIC_VERTEX),
         basicFragment (GL_FRAGMENT_SHADER, BASIC_FRAGMENT);
     
+    ShaderProgram program;
+
+    program.attach(basicVertex);
+    program.attach(basicFragment);
+
     bool window_open = true;
 
     while (window_open) {
@@ -81,7 +86,7 @@ int main() {
 
         glClearColor(135.0f / 255.0f, 206.0f / 255.0f, 235.0f / 255.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        
+
         SDL_GL_SwapWindow(window);
     }
 
