@@ -70,6 +70,12 @@ int main() {
          0.0f,  0.5f, 0.0f
     };
 
+    GLuint triangleVAO, triangleVBO;
+
+    glGenVertexArrays(1, &triangleVAO);
+    
+    glGenBuffers(1, &triangleVBO);
+
     bool window_open = true;
 
     while (window_open) {
