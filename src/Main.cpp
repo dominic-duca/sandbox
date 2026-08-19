@@ -73,8 +73,10 @@ int main() {
     GLuint triangleVAO, triangleVBO;
 
     glGenVertexArrays(1, &triangleVAO);
+    glBindVertexArray(triangleVAO);
     
     glGenBuffers(1, &triangleVBO);
+    glBindBuffer(GL_ARRAY_BUFFER, triangleVBO);
 
     bool window_open = true;
 
